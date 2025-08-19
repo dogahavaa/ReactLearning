@@ -1,0 +1,29 @@
+.language-main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.language-container {
+    width: 250px;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.language-title {
+    text-align: center;
+    color: #35A39C
+}
+
+.description {
+    color: rgb(65, 65, 65);
+    font-weight: 300;
+}
+
+.language-value {
+    text-align: right;
+    color: #35A39C;
+}
