@@ -4,7 +4,8 @@ import { SlArrowRight } from "react-icons/sl";
 import axios from 'axios';
 
 let BASE_URL = 'https://api.freecurrencyapi.com/v1/latest';
-let API_KEY = "fca_live_pJ5LeBvuB7ud19tfKD7al8QfexvX1Y4TbAeB68eB";
+let API_KEY = "fca_live_pJ5LeBvuB7ud19tfKD7al8QfexvX1Y4TbAeB68";
+//eB
 
 function Currency() {
 
