@@ -1,0 +1,55 @@
+.currency-div {
+    display: flex;
+    /*Elemanları alt alta dizer*/
+    flex-direction: column;
+    /*Elemanları yatayda ortalar*/
+    align-items: stretch;
+    /*Elemanları dikeyde ortalar*/
+    justify-content: center;
+    /*Elemanlar arası boşluk bırakır*/
+    gap: 10px;
+    /*Konteynerı içeriğe göre küçültür*/
+    width: fit-content;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+.currency-div input {
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.content-div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.select-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    gap: 10px;
+    color: white;
+    margin: 0 auto;
+}
+
+select {
+    padding: 7px 15px;
+    border-radius: 8px;
+    outline: none;
+    text-align: left;
+}
+
+.currency-title h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: whitesmoke;
+    font-weight: 100;
+    margin: 10px;
+    padding: 0;
+    font-size: 18pt;
+}
