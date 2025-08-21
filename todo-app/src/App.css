@@ -1,0 +1,144 @@
+body {
+    background-color: rgb(22, 22, 22);
+}
+
+.app-main {
+    width: 400px;
+    height: auto;
+    margin: 100px auto;
+    color: white;
+}
+
+
+.todo-create-main {
+    width: 100%;
+    border: none;
+    border-top: 1px solid silver;
+    border-right: 1px solid silver;
+    border-left: 1px solid silver;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+
+}
+
+.todo-create-input-div {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/*.todo-create-input {
+    border: none;
+    border-bottom: 1px solid silver;
+    width: 100%;
+    outline: none;
+    padding: 10px 0;
+    border-radius: 7px;
+}
+*/
+
+.todo-create-input {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    background-color: #222;
+    color: #fff;
+    outline: none;
+    transition: border-color 0.3s;
+    box-sizing: border-box;
+}
+
+.todo-create-input:focus {
+    border-color: #1e90ff;
+    box-shadow: 0 0 5px rgba(30, 144, 255, 0.5);
+}
+
+.todo-create-button {
+    padding: 10px 20px;
+    background-color: #1e90ff;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-sizing: border-box;
+}
+
+.todo-create-button:hover {
+    background-color: #1873cc;
+}
+
+.todo-create-button:active {
+    background-color: #145ca3;
+}
+
+.todo-list-main {
+    width: 100%;
+    border: 1px solid silver;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.todo-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 500px;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    background-color: #222;
+    border: none;
+    border-bottom: 1px solid #555;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: background-color 0.3s;
+}
+
+.todo-main:hover {
+    background-color: #333;
+}
+
+.todo-icons-item {
+    font-size: 17pt;
+    cursor: pointer;
+}
+
+.item-delete {
+    margin-right: 10px;
+    color: rgb(117, 0, 0);
+}
+
+.item-edit {
+    color: #246db6;
+}
+
+.item-check {
+    color: #00ac17;
+}
+
+
+/*
+.todo-item.completed {
+    background-color: #1a3c34;
+    text-decoration: line-through;
+}
+    
+}
+
+.todo-item button:hover {
+    background-color: #e63939;
+}
+*/

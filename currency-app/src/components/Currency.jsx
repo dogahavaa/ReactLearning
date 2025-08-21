@@ -14,20 +14,13 @@ function Currency() {
     const [toCurrency, setToCurrency] = useState('TRY');
     const [result, setResult] = useState(0);
 
-
     const exchange = async () => {
-        console.log(amount)
-        console.log(fromCurrency)
-        console.log(toCurrency)
 
         const response = await axios.get(`${BASE_URL}?apikey=${API_KEY}&base_currency=${fromCurrency}`);
-
         const result = (response.data.data[toCurrency] * amount).toFixed(2);
-
         setResult(result);
 
     }
-
 
     return (
         <div className='currency-div'>
