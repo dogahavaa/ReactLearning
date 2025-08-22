@@ -6,7 +6,6 @@ import User from './User';
 function UserList() {
     const dispatch = useDispatch();
     const { users } = useSelector((store) => store.users)
-    console.log(users)
 
     useEffect(() => {
         dispatch(getAllUsers())
@@ -16,10 +15,9 @@ function UserList() {
         <div>
             {
                 users && users.map((user) => (
-                    <User user={user} />
+                    <User key={user.id} user={user} />
                 ))
             }
-
         </div>
     )
 }
