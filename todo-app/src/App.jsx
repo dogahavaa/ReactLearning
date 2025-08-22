@@ -17,14 +17,19 @@ function App() {
   }
 
   const UpdateTodo = (newTodo) => {
-    // Yapılacak
+    setTodos(todos.map((todo) => {
+      if (todo.id !== newTodo.id) {
+        return todo
+      }
+      return newTodo;
+    }))
+
   }
 
   return (
-
     <div className='app-main'>
       <TodoCreate onTodoCreate={CreateTodo} />
-      <TodoList todos={todos} onRemoveTodo={RemoveTodo} />
+      <TodoList todos={todos} onRemoveTodo={RemoveTodo} onUpdateTodo={UpdateTodo} />
     </div>
   )
 }

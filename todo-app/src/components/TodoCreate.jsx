@@ -27,7 +27,7 @@ function TodoCreate({ onTodoCreate }) {
                     placeholder='Todo Giriniz..'></input>
             </div>
             <div>
-                <button onClick={CreateTodo} className='todo-create-button'>ToDo Oluştur</button>
+                <button onClick={CreateTodo} className='todo-create-button'>Oluştur</button>
             </div>
         </div>
     )

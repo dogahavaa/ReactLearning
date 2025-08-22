@@ -3,19 +3,22 @@ import { MdOutlineRemoveCircleOutline } from "react-icons/md";
 import { MdOutlineModeEdit } from "react-icons/md";
 import { FaCheck } from "react-icons/fa";
 
-
-
-function Todo({ todo, onRemoveTodo }) {
+function Todo({ todo, onRemoveTodo, onUpdateTodo }) {
     const { id, content } = todo;
-    const removeTodo = () => {
-        onRemoveTodo(id)
-    }
     const [editable, setEditable] = useState(false);
     const [editContent, setEditContent] = useState(content);
 
-    const EditTodo = () => {
-        setEditable(false)
+    const removeTodo = () => {
+        onRemoveTodo(id)
+    }
 
+    const EditTodo = () => {
+        setEditable(false);
+        const newTodo = {
+            id: id,
+            content: editContent
+        }
+        onUpdateTodo(newTodo);
     }
 
     return (
@@ -45,7 +48,6 @@ function Todo({ todo, onRemoveTodo }) {
                         : <MdOutlineModeEdit className='todo-icons-item item-edit'
                             onClick={() => setEditable(true)}
                         />
-
                 }
 
             </div>
