@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #F7F7F7;
+    color: #2D2D2D;
+    font-family: 'Inter', 'Arial', sans-serif;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-column-spacebetween {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center
+}
