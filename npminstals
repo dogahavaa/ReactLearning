@@ -1,0 +1,5 @@
+npm install react-icons                     -> icon 
+npm install @reduxjs/toolkit react-redux    -> redux
+npm install react-router-dom                -> router dom
+npm install axios                           -> axios
+npm install @mui/material @emotion/react @emotion/styled        -> Material UI
