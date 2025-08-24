@@ -21,9 +21,7 @@ function Header() {
             root.style.backgroundColor = "#1A1A1A";
             root.style.color = "#E0E0E0";
         }
-
     }
-
 
 
     return (
