@@ -7,15 +7,21 @@ import CardActionArea from '@mui/material/CardActionArea';
 import CardActions from '@mui/material/CardActions';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
+import { useNavigate } from 'react-router-dom';
 
 function Product({ product }) {
 
     const { id, title, price, description, category, image } = product;
-    console.log(title)
+
+    const navigate = useNavigate();
+
+    const handleCardClick = () => {
+        navigate(`/product-details/${id}`)
+    }
 
 
     return (
-        <Card sx={{ maxWidth: 250, height: 650, margin: 1 }}>
+        <Card sx={{ maxWidth: 250, height: 450, margin: 1 }} onClick={handleCardClick}>
             <CardActionArea>
                 <Box sx={{ display: 'flex', justifyContent: 'center', padding: '10px' }}>
                     <CardMedia
@@ -29,20 +35,16 @@ function Product({ product }) {
                 </Box>
 
                 <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
-                        {title}
+                    <Typography gutterBottom variant="h6" component="div" sx={{ height: "75px" }}>
+                        {
+                            title.length > 30 ? `${title.slice(0, 30)}...` : title
+                        }
                     </Typography>
-                    <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                        Lizards are a widespread group of squamate reptiles, with over 6,000
-                        species, ranging across all continents except Antarctica
+                    <Typography variant="h5" sx={{ color: 'darkorange', fontWeight: "bold", textAlign: "right" }}>
+                        {price} ₺
                     </Typography>
                 </CardContent>
             </CardActionArea>
-            <CardActions>
-                <Button size="small" color="primary">
-                    Detay
-                </Button>
-            </CardActions>
         </Card>
     )
 }

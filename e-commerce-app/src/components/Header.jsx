@@ -3,6 +3,8 @@ import '../css/Header.css'
 import { IoCartOutline } from "react-icons/io5";
 import { CiLight } from "react-icons/ci";
 import { FaMoon } from "react-icons/fa6";
+import { useNavigate } from 'react-router-dom';
+import Badge from '@mui/material/Badge';
 
 
 
@@ -23,10 +25,11 @@ function Header() {
         }
     }
 
+    const navigate = useNavigate();
 
     return (
         <div className='flex-column-spacebetween' style={{ paddingTop: '10px' }}>
-            <div className='flex-row' style={{ justifyContent: 'flex-start' }}>
+            <div onClick={() => navigate('/')} className='flex-row' style={{ justifyContent: 'flex-start', cursor: 'pointer' }}>
                 <img className='logo' src='./src/assets/logoo.png' />
                 <p className='logo-text'>DOĞA HAVA A.Ş.</p>
             </div>
@@ -38,8 +41,10 @@ function Header() {
                             ? <CiLight className='icons-item' onClick={changeTheme} />
                             : <FaMoon className='icons-item' onClick={changeTheme} />
                     }
+                    <Badge badgeContent={4} color='error'>
+                        <IoCartOutline className='icons-item' />
+                    </Badge>
 
-                    <IoCartOutline className='icons-item' />
                 </div>
 
             </div>
