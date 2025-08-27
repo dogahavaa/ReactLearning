@@ -40,6 +40,7 @@ function ProductDetails() {
             id,
             price,
             title,
+            image,
             description,
             count: count
         }

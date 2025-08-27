@@ -5,12 +5,18 @@ import { CiLight } from "react-icons/ci";
 import { FaMoon } from "react-icons/fa6";
 import { useNavigate } from 'react-router-dom';
 import Badge from '@mui/material/Badge';
+import { useDispatch, useSelector } from 'react-redux';
+import { setDrawer } from '../redux/slices/cartSlice';
 
 
 
 function Header() {
 
+    const { cartProducts } = useSelector((store) => store.cart)
+
     const [theme, setTheme] = useState(false)
+
+    const dispatch = useDispatch();
 
     const changeTheme = () => {
         const root = document.getElementById("root");
@@ -41,7 +47,7 @@ function Header() {
                             ? <CiLight className='icons-item' onClick={changeTheme} />
                             : <FaMoon className='icons-item' onClick={changeTheme} />
                     }
-                    <Badge badgeContent={4} color='error'>
+                    <Badge onClick={() => dispatch(setDrawer())} badgeContent={cartProducts.length} color='error'>
                         <IoCartOutline className='icons-item' />
                     </Badge>
 
