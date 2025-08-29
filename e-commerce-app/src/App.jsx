@@ -12,7 +12,7 @@ import { setDrawer } from './redux/slices/cartSlice'
 
 function App() {
 
-  const { cartProducts, drower } = useSelector((store) => store.cart)
+  const { cartProducts, drawer } = useSelector((store) => store.cart)
   const dispatch = useDispatch();
 
   return (
@@ -23,7 +23,7 @@ function App() {
         <RouterConfig />
         <Drawer
           anchor='right'
-          open={drower}
+          open={drawer}
           onClose={() => dispatch(setDrawer())}
         >
           <h2 style={{ padding: '20px' }}>Sepetim</h2>

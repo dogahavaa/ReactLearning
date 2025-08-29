@@ -30,6 +30,8 @@ export const cartSlice = createSlice({
             }
         },
         setDrawer: (state) => {
+            console.log("set drawer çalıştı")
+            console.log("Drawer durumu : " + state.drawer)
             state.drawer = !state.drawer;
         }
     }
